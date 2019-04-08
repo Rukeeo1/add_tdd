@@ -5,6 +5,7 @@ const myAddObj = {
             return 'first and second parameter\'s must be numbers'
         }
         let ans = a + b;
+        console.log(ans);
         if(Number.isInteger(ans)){
             return ans;
         }else{
@@ -13,5 +14,4 @@ const myAddObj = {
         //return a + b;
     }
 };
-console.log(myAddObj.add(0.2,0.3));
 module.exports = myAddObj;
