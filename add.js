@@ -1,6 +1,6 @@
 const myAddObj = {
-    add:function(){
-        
+    add:function(a,b){
+        return a + b;
     }
 };
 module.exports = myAddObj;
