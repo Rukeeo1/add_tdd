@@ -4,7 +4,14 @@ const myAddObj = {
         if(typeof a !== 'number' || typeof b !== 'number'){
             return 'first and second parameter\'s must be numbers'
         }
-        return a + b;
+        let ans = a + b;
+        if(Number.isInteger(ans)){
+            return ans;
+        }else{
+            return Number(ans.toFixed(2));
+        }
+        //return a + b;
     }
 };
+console.log(myAddObj.add(0.2,0.3));
 module.exports = myAddObj;

@@ -8,9 +8,14 @@ describe('Add Two Numbers', function(){
     });
 
     it('should have a numbers a it\'s parameters', function(){
-        expect(addObj.add('2',2)).toBe('first and second parameter\'s must be numbers')
+        expect(addObj.add('2',2)).toBe('first and second parameter\'s must be numbers');
+        expect(addObj.add(2,null)).toBe('first and second parameter\'s must be numbers');
     });
-    
+
+    it('should work for floating point numbers', function(){
+        expect(addObj.add(0.2,0.4)).toBe(0.6);
+    });
+
 });
 
 
